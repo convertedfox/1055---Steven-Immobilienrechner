@@ -41,11 +41,12 @@ with col2:
     tilgung = st.number_input("Anfängliche Tilgung (%)", value=2.0, step=0.1)
     
     st.write("**Monatliches Nettoeinkommen:**")
+    st.caption("Was wird Dir auf Dein Konto jeden Monat überwiesen?")
     gehalt = st.number_input("Monatliches Nettoeinkommen (€)", value=4_000, step=100)
     
     st.write("**Derzeitige Miete:**")
     st.caption("Zum Vergleich mit der Kreditrate")
-    miete = st.number_input("Deine derzeitige Miete (€)", value=1_200, step=50)
+    miete = st.number_input("Deine derzeitige Miete (€)", value=800, step=50)
 
 # Berechnungen
 nebenkosten = kaufpreis * nebenkosten_prozent / 100
