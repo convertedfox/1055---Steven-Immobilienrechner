@@ -9,12 +9,16 @@ Mit diesem Tool kannst du berechnen, ob du Dir einen Immobilienkredit für eine 
 """)
 
 st.header("🔢 Eingabedaten")
-
+st.write("**Kaufpreis der Immobilie:** Der Preis, den du für die Immobilie zahlen möchtest. Je höher, desto mehr Kredit brauchst du.Vergiss nicht, auch Nebenkosten wie Notar und Grunderwerbsteuer zu berücksichtigen!")
 kaufpreis = st.number_input("Kaufpreis der Immobilie (€)", value=400_000, step=10_000)
+st.write("**Eigenkapital:** Das Geld, das du selbst einbringst. Je mehr, desto besser!")
 eigenkapital = st.number_input("Eigenkapital (€)", value=70_000, step=5_000)
+st.write("**Effektiver Jahreszins:** Der Zinssatz, den die Bank für den Kredit verlangt. Je niedriger, desto günstiger!")
 zinssatz = st.number_input("Effektiver Jahreszins (%)", value=4.0, step=0.1)
+st.write("**Anfängliche Tilgung:** Der Prozentsatz des Kredits, den du jährlich tilgen möchtest. Höhere Tilgung bedeutet schnellere Rückzahlung!")  
 tilgung = st.number_input("Anfängliche Tilgung (%)", value=2.0, step=0.1)
 gehalt = st.number_input("Monatliches Nettoeinkommen (€)", value=4_000, step=100)
+st.write("**Derzeitige Miete:** Deine monatliche Miete, um die Belastung mit der Kreditrate vergleichen zu können.")
 miete = st.number_input("Deine derzeitige Miete (€)", value=1_200, step=50)
 
 # Berechnungen
